@@ -1,0 +1,5 @@
+test_gen.exe
+test_gen.o
+*.zip
+[0-9]*/
+.vscode/
