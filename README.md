@@ -61,7 +61,7 @@ Chương trình nhận 2 đối số: tên bài và số thứ tự test (1–5)
 | 2 | Mảng tăng dần 1→n | Quicksort pivot đầu/cuối | Pivot luôn là min → recursion depth O(n), partition lệch |
 | 3 | Tất cả bằng 42 | Quicksort không 3-way | Mọi phần tử = pivot → partition luôn lệch tối đa → O(n²) |
 | 4 | INT_MAX xen kẽ INT_MIN | QS dùng (a+b)/2; tải I/O | Overflow trung bình (bẫy đúng/sai); `INT_MIN` 11 ký tự → tối đa byte I/O cho radix/merge |
-| 5 | Organ-pipe pattern | Quicksort median-of-three | Median-of-three chọn pivot tệ trên pattern này |
+| 5 | Chẵn giảm max..50001, lẻ = 0 | Insertion, QS pivot đầu / không 3-way | a[0]=max → pivot đầu lệch O(n²); 50% bằng 0 hại QS không 3-way |
 
 #### Bài B — Lexicographic Sort (n≤10⁵, len∈[10,100], TL=10s)
 

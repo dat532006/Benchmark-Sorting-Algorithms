@@ -26,7 +26,10 @@ $problems = @("int", "strlexi", "strlenlexi")
 foreach ($problem in $problems) {
     for ($i = 1; $i -le 5; $i++) {
         $num = "{0:D3}" -f $i
-        .\test_gen.exe $problem $i > "$MSSV/$problem/test$num.in"
+        $outPath = Join-Path (Get-Location) "$MSSV/$problem/test$num.in"
+        $lines = & .\test_gen.exe $problem $i
+        $content = ($lines -join "`n") + "`n"
+        [System.IO.File]::WriteAllText($outPath, $content, (New-Object System.Text.UTF8Encoding $false))
         Write-Host "Generated $MSSV/$problem/test$num.in"
     }
 }
